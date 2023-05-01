@@ -6,3 +6,11 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+/* export default {
+  primaryColor: "white",
+  secondaryColor: "black",
+  tertiaryColor: "green",
+  breakpointMobile: "(max-width: 550px)",
+
+
+} */
