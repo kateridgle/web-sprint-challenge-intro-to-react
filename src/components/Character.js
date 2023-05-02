@@ -1,20 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Write your Character component here
-const [character, setCharacter] = useState();//axios characters here?
+const Character = (props) => {
+const { characters, characterStats } = props;
 
-useEffect(() => {
-    axios.get('https://swapi.dev/api/people/')
-        .then(res => {
-            console.log(res);
-        })
-        .catch(err => console.err(err))
-}, [])
+return (
+    <div className='character-container'>
+        { characters.map(character => {
+        return <Character character={character.name} characterStats={characterStats} key={character.id}/>
+      })}
 
-// return (
-// <div className='container'>
-//     <h1>people.name</h1>
-// </div>
+    </div>
+)
+}
+export default Character;
 
 
 
