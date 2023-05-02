@@ -1,15 +1,12 @@
-import { useState, useEffect } from "react";
+import React from "react";
 
 // Write your Character component here
 const Character = (props) => {
-const { characters, characterStats } = props;
+const { character } = props;
 
 return (
     <div className='character-container'>
-        { characters.map(character => {
-        return <Character character={character.name} characterStats={characterStats} key={character.id}/>
-      })}
-
+        <h2>{character.name}</h2>
     </div>
 )
 }
